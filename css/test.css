@@ -1,0 +1,53 @@
+body{
+	background-color: #f8f4fa;
+	font-family: 'Oxygen';
+}
+preto{ 
+	color: #0d1601;
+	}
+rosa{
+	color:#ffa69e ;
+}
+azul{
+	color: #9bb1ff;
+}
+roxo{
+	color:#85597a ;
+}
+branco{
+	color: #f8f4fa;
+}
+.big{
+	font-size: 60px;
+}
+.topnav {
+  background-color: #0d1601;
+  overflow: hidden;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  padding: 0 1 px; /* Add some padding for better spacing */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f8f4fa;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #0d1601;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #85597a;
+  color: #f8f4fa;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #ffa69e;
+  color: #f8f4fa;
+}
