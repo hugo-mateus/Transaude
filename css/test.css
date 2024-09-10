@@ -1,53 +1,124 @@
-body{
-	background-color: #f8f4fa;
-	font-family: 'Oxygen';
-}
-preto{ 
-	color: #0d1601;
-	}
-rosa{
-	color:#ffa69e ;
-}
-azul{
-	color: #9bb1ff;
-}
-roxo{
-	color:#85597a ;
-}
-branco{
-	color: #f8f4fa;
-}
-.big{
-	font-size: 60px;
-}
-.topnav {
-  background-color: #0d1601;
-  overflow: hidden;
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center items vertically */
-  padding: 0 1 px; /* Add some padding for better spacing */
+:root {
+  /* Define color variables */
+  --preto: #040f16; /* Dark Gray (Black) */
+  --rosa: #Ffa69b; /* Pink */
+  --azul: #9bb1ff; /* Blue */
+  --roxo: #85597a; /* Purple */
+  --branco: #f3eef6; /* Light Gray (White) */
 }
 
-/* Style the links inside the navigation bar */
+/* Use variables in your styles */
+body {
+  background-color: var(--branco);
+  font-family: 'Oxygen';
+}
+
+/* Navigation styles */
+.topnav {
+  background-color: var(--preto);
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Corrected padding value */
+}
+
 .topnav a {
-  float: left;
-  color: #f8f4fa;
+  color: var(--branco);
   align-items: center;
   justify-content: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #0d1601;
+  background-color: var(--preto);
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #85597a;
-  color: #f8f4fa;
+.topnav a.active:hover {
+  background-color: var(--rosa);
+  color: var(--branco);
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #ffa69e;
-  color: #f8f4fa;
+.topnav .dropdown {
+  position: relative; /* Position relative for the dropdown content */
+  display: inline-block; /* Align dropdowns inline */
 }
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position absolutely relative to the parent */
+  background-color: var(--preto);
+  width: auto; /* Adjust width based on content */
+  z-index: 1;
+  max-height: 0; /* Start with no height */
+  overflow: hidden; /* Hide overflow */
+  top: 100%; /* Position below the parent */
+  left: 0; /* Align with the left side of the parent */
+  margin-top: 8px; /* Add vertical space between parent and dropdown */
+  padding: 10px; /* Add padding for better spacing */
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Create 3 equal-width columns */
+  gap: 10px; /* Add space between items */
+}
+
+.dropdown-content a {
+  color: var(--branco);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: var(--preto);
+  text-align: left; /* Align text to the left */
+}
+
+.dropdown-content a:hover {
+  background-color: var(--azul);
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid; /* Show the dropdown on hover */
+  max-height: 500px; /* Max height for the animation effect */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push search to the right */
+  position: relative; /* To control absolute positioning */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Search input style */
+.search-input {
+  width: 0; /* Start with 0 width */
+  padding: 8px;
+  border: 1px solid var(--preto); /* Use the primary colors defined */
+  border-radius: 4px;
+  transition: width 0.4s ease; /* Smooth transition for expanding */
+  font-size: 16px;
+  opacity: 0; /* Start hidden */
+  margin-right: -40px; /* Offset margin to hide */
+}
+
+/* Style for search button */
+.search-btn {
+  background-color: var(--preto);
+  color: var(--branco);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.fillerbox{
+  background-color: var(--branco);
+  height: 20px;
+}
+
+
+.box1{
+	background-color: var(--azul);
+	position: right;
+	height: 500px;
+	width: 500px;
+
+}
+
+
