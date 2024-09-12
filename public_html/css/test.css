@@ -13,9 +13,7 @@ body {
   font-family: 'Oxygen';
 }
 
-h1{
-  padding: 16px;
-}
+
 
 /* Navigation styles */
 .topnav {
@@ -157,6 +155,7 @@ h1{
 h1{
   font-weight: 550;
   margin: 20px;
+  padding:16px;
 }
 
 h2{

@@ -1,0 +1,36 @@
+:root {
+    /* Define color variables */
+    --preto: #040f16; /* Dark Gray (Black) */
+    --rosa: #Ffa69b; /* Pink */
+    --azul: #9bb1ff; /* Blue */
+    --roxo: #85597a; /* Purple */
+    --branco: #f3eef6; /* Light Gray (White) */
+}
+
+
+
+body {
+    background-color: var(--roxo);
+    font-family: 'Oxygen';
+    display: flex; /* Use flexbox for positioning */
+    justify-content: space-between; /* Space between content */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.map-container {
+    background-color: var(--rosa); /* Assuming var(--rosa) is a valid CSS variable */
+    width: 40%; /* Set width to 40% of the screen */
+    height: 100vh; /* Full height to fit the viewport */
+    box-sizing: border-box; /* Include padding and border in width */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: auto; /* Align to the right */
+    position: relative; /* Position relative for content inside */
+}
+
+#map {
+    width: 100%; /* Make the map fill its container */
+    height: 100%; /* Make the map fill its container */
+    border-radius: 10px; /* Rounded corners if you want the map to follow the container */
+}
+

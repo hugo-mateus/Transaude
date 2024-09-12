@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Pesquisa</title>
+	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="../css/search_style.css">
+	<link rel="stylesheet" type="text/css" href="../css/test.css">
+    <script src="../js/script.js" defer></script> 
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+	<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	</style>
+</head>
+<body>
+
+<div class="fillerbox"></div>
+
+<div class="map-container">
+	<div id="map"></div>
+</div>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiaHVnby1tYXRldXMiLCJhIjoiY20wem16eTN5MDEzZjJ3cHJmN2phc2Q0eCJ9.gIE7ohFsScNjXY54PPBQLw';
+	const map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/hugo-mateus/cm0zn5ehu00bl01qlg9gfdzaa',
+		center: [-47.06189, -22.81743],
+		zoom: 15
+	});
+
+	// Create a default Marker and add it to the map.
+	const marker1 = new mapboxgl.Marker({ color: "#85597a" })
+		.setLngLat([-47.06189, -22.81743])
+		.addTo(map);
+	</script>
+</body>
+</html>
