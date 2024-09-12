@@ -61,7 +61,7 @@ h1{
   margin-top: 8px; /* Add vertical space between parent and dropdown */
   padding: 10px; /* Add padding for better spacing */
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Create 3 equal-width columns */
+  grid-template-columns: repeat(4, minmax(150px, 1fr)); /* Create 3 equal-width columns */
   gap: 10px; /* Add space between items */
 }
 
