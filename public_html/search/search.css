@@ -15,14 +15,133 @@ body {
 
 .caixamapa{
     background-color: var(--rosa);
-    width: 47%; /* Make width flexible */
-    height: auto; /* Adjust height automatically based on content */
+    width: 53%; /* Make width flexible */
+    height: 80vh; /* Adjust height automatically based on content */
     box-sizing: border-box; /* Include padding in width calculation */
     border-radius: 10px; /* Optional: rounded corners */
     align-self: right;
     position: right;
     margin-left: auto;
+    position: fixed; /* Keep the map fixed while scrolling */
+    top: 100px; /* Distance from the top of the viewport */
+    right: 0; /* Align the map to the right */
+    z-index: 1; /* Ensure it's above other content if needed */
 
 }
 
 #map { height: 500px; }
+
+.caixaesquerda{
+background-color: var(--branco);
+  width: 47%; /* Make width flexible */
+  height: 5000px; /* Adjust height automatically based on content */
+  box-sizing: border-box; /* Include padding in width calculation */
+  border-radius: 10px; /* Optional: rounded corners */
+
+}
+
+.filter { 
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: flex-start; /* Align items to the left */
+    background-color: var(--preto); /* Adjust this color as needed */
+ /* Higher than the map's z-index */
+    width: 47%;
+    height: 50px;
+  }
+  
+  
+  .filter a {
+    color: var(--branco);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    background-color: var(--preto);
+    width: 47%;
+  }
+  
+  
+  .filter a.active:hover {
+    background-color: var(--preto);
+    color: var(--branco);
+  }
+  
+  .filter .dropdown {
+    position: relative; /* Position relative for the dropdown content */
+    display: inline-block; /* Align dropdowns inline */
+    background-color: var(--preto);
+    
+  }
+  
+  .filter.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position absolutely relative to the parent */
+    background-color: var(--roxo);
+    width: auto; /* Adjust width based on content */
+    z-index: 1;
+    max-height: 0; /* Start with no height */
+    overflow: hidden; /* Hide overflow */
+    top: 100%; /* Position below the parent */
+    left: 0; /* Align with the left side of the parent */
+    margin-top: 8px; /* Add vertical space between parent and dropdown */
+    padding: 10px; /* Add padding for better spacing */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); /* Create 3 equal-width columns */
+    gap: 10px; /* Add space between items */
+  }
+  
+  .filter.dropdown-content a {
+    color: var(--branco);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: var(--roxo);
+    text-align: left; /* Align text to the left */
+  }
+  
+  .filter.dropdown-content a:hover {
+    background-color: var(--azul);
+  }
+  
+  .filter.dropdown:hover .dropdown-content {
+    display: grid; /* Show the dropdown on hover */
+    max-height: 500px; /* Max height for the animation effect */
+    background-color: var(--roxo);
+    
+  }
+
+
+  /* Centered box styling */
+  .box1 {
+    background-color: var(--azul);
+    width: 47%; /* Make width flexible */
+    height: auto; /* Adjust height automatically based on content */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+
+.perfil1{
+    background-color: var(--azul);
+    color: var(--preto);
+    width: 47%; /* Make width flexible */
+    height: 200px; /* Adjust height automatically based on content */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-radius: 10px; /* Optional: rounded corners */
+
+}
+  
+h3{
+    font-weight: 600;
+    margin: 20px;
+    padding:16px;
+  }
+  
+  h4{
+    font-weight: 400;
+    font-size: 22px;
+    margin: 10px;
+  }

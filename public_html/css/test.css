@@ -21,6 +21,8 @@ body {
   align-items: center; /* Vertically center items */
   justify-content: flex-start; /* Align items to the left */
   background-color: var(--preto); /* Adjust this color as needed */
+  position: relative;
+  z-index: 10; /* Higher than the map's z-index */
 }
 
 
@@ -99,7 +101,7 @@ body {
   color: var(--branco);
   width: 0; /* Start with 0 width */
   padding: 8px;
-  border: 1px solid var(--roxo); /* Use the primary colors defined */
+  border: 1px solid var(--preto); /* Use the primary colors defined */
   border-radius: 4px;
   transition: width 0.4s ease; /* Smooth transition for expanding */
   font-size: 16px;
@@ -139,6 +141,8 @@ body {
 .blackfillerbox{
   background-color: var(--preto);
   height: 30px;
+  position: relative;
+  z-index: 10; /* Higher than the map's z-index */
 }
 
 
@@ -183,6 +187,8 @@ h2{
   color: var(--branco);
   text-align: center;
   padding:40 px;
+  position: relative;
+  z-index: 10; /* Higher than the map's z-index */
 }
 
 .footer-container {
@@ -191,6 +197,8 @@ h2{
     align-items: center; /* Center content vertically */
     max-width: 1200px; /* Max width of the footer */
     margin: 0 auto; /* Center the footer */
+    position: relative;
+    z-index: 10; /* Higher than the map's z-index */
 }
 
 .footer-column {
@@ -198,15 +206,20 @@ h2{
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     width: 45%; /* Adjust width of the columns */
+    position: relative;
+    z-index: 10; /* Higher than the map's z-index */
 }
 
 .footer-logo {
     width: 100px; /* Adjust the logo size */
     margin-bottom: 20px; /* Spacing below the logo */
+    position: relative;
+    z-index: 10; /* Higher than the map's z-index */
 }
 
 .footer-text p {
     margin: 5px 0; /* Spacing between text */
+    position: relative;
 }
 
 .footer-column h3 {
