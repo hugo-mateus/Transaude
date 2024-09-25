@@ -23,14 +23,14 @@ body {
     position: right;
     margin-left: auto;
     position: fixed; /* Keep the map fixed while scrolling */
-    top: 100px; /* Distance from the top of the viewport */
+    margin-top: 10px;
     right: 0; /* Align the map to the right */
     z-index: 1; /* Ensure it's above other content if needed */
     transition: top 0.3s ease-in-out;
 
 }
 
-#map { height: 500px; }
+#map { height: 700px; }
 
 .caixaesquerda{
 background-color: var(--branco);
