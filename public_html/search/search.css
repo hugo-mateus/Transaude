@@ -14,7 +14,7 @@ body {
 }
 
 .caixamapa{
-    background-color: var(--rosa);
+    background-color: var(--branco);
     width: 53%; /* Make width flexible */
     height: 80vh; /* Adjust height automatically based on content */
     box-sizing: border-box; /* Include padding in width calculation */
@@ -26,6 +26,7 @@ body {
     top: 100px; /* Distance from the top of the viewport */
     right: 0; /* Align the map to the right */
     z-index: 1; /* Ensure it's above other content if needed */
+    transition: top 0.3s ease-in-out;
 
 }
 
@@ -46,7 +47,7 @@ background-color: var(--branco);
     justify-content: flex-start; /* Align items to the left */
     background-color: var(--preto); /* Adjust this color as needed */
  /* Higher than the map's z-index */
-    width: 47%;
+    width: 63%;
     height: 50px;
   }
   
@@ -124,24 +125,56 @@ background-color: var(--branco);
     border-radius: 10px; /* Optional: rounded corners */
   }
 
-.perfil1{
+  .perfil1 {
     background-color: var(--azul);
     color: var(--preto);
-    width: 47%; /* Make width flexible */
-    height: 200px; /* Adjust height automatically based on content */
-    box-sizing: border-box; /* Include padding in width calculation */
-    border-radius: 10px; /* Optional: rounded corners */
-
+    width: 46%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-  
-h3{
+
+.perfil2 {
+    background-color: var(--rosa);
+    color: var(--preto);
+    width: 46%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Flex container for image and text */
+.perfil-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+
+/* Style for the image */
+.imagem-perfil {
+    width: 90px;
+    height: 110px;
+    margin-right: 120px; /* Space between image and text */
+}
+
+/* Text container (minicaixinhaperfil) */
+.minicaixinhaperfil {
+    display: flex;
+    flex-direction: column; /* Align the h4 elements vertically */
+}
+
+/* Title style */
+h3 {
     font-weight: 600;
-    margin: 20px;
-    padding:16px;
-  }
-  
-  h4{
+    margin-bottom: 5px; /* Space between name and the rest */
+}
+
+/* Style for the h4 elements */
+h4 {
     font-weight: 400;
-    font-size: 22px;
-    margin: 10px;
-  }
+    font-size: 14px;
+    margin: 5px 0; /* Adjust space between items */
+}
