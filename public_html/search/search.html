@@ -6,36 +6,32 @@
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="../css/search_style.css">
 	<link rel="stylesheet" type="text/css" href="../css/test.css">
+	<link rel="stylesheet" type="text/css" href="search.css">
     <script src="../js/script.js" defer></script> 
+	<script src="search.js" defer></script> 
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-	<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
-	<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
-	<style>
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-	</style>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
 </head>
-<body>
 
+
+<body onload="includeHTML()">
+
+<div w3-include-html="navbar_2.html"></div>
 <div class="fillerbox"></div>
 
-<div class="map-container">
-	<div id="map"></div>
-</div>
+<div class="caixamapa" id="map"></div>
 
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiaHVnby1tYXRldXMiLCJhIjoiY20wem16eTN5MDEzZjJ3cHJmN2phc2Q0eCJ9.gIE7ohFsScNjXY54PPBQLw';
-	const map = new mapboxgl.Map({
-		container: 'map',
-		style: 'mapbox://styles/hugo-mateus/cm0zn5ehu00bl01qlg9gfdzaa',
-		center: [-47.06189, -22.81743],
-		zoom: 15
-	});
 
-	// Create a default Marker and add it to the map.
-	const marker1 = new mapboxgl.Marker({ color: "#85597a" })
-		.setLngLat([-47.06189, -22.81743])
-		.addTo(map);
-	</script>
+
+<div w3-include-html="footer_2.html"></div>
+
+<script src="../js/script.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
+

@@ -16,7 +16,7 @@ body {
 
 
 /* Navigation styles */
-.topnav {
+.topnav { 
   display: flex;
   align-items: center; /* Vertically center items */
   justify-content: flex-start; /* Align items to the left */

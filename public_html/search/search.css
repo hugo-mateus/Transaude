@@ -1,0 +1,28 @@
+:root {
+    /* Define color variables */
+    --preto: #040f16; /* Dark Gray (Black) */
+    --rosa: #Ffa69b; /* Pink */
+    --azul: #9bb1ff; /* Blue */
+    --roxo: #85597a; /* Purple */
+    --branco: #f3eef6; /* Light Gray (White) */
+}
+
+  /* Use variables in your styles */
+body {
+    background-color: var(--branco);
+    font-family: 'Oxygen';
+}
+
+.caixamapa{
+    background-color: var(--rosa);
+    width: 47%; /* Make width flexible */
+    height: auto; /* Adjust height automatically based on content */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-radius: 10px; /* Optional: rounded corners */
+    align-self: right;
+    position: right;
+    margin-left: auto;
+
+}
+
+#map { height: 500px; }
